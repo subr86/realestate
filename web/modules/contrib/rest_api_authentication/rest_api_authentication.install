@@ -1,0 +1,52 @@
+<?php
+/**
+ * @file
+ * Installation file for miniOrange REST API Module.
+ */
+
+ /**
+  * Implementing hook_schema
+  **/
+
+function rest_api_authentication_schema() {
+  $schema['rest_api_authentication_token'] = array(
+    'description' => t('User Tokens'),
+    'fields' => array(
+    'id' => array(
+      'type' => 'serial',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+      'description' => t('S.No.: '),
+      ),
+    'user_id_val' => array(
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'description' => t('The UserIn of the user.'),
+      ),
+	  'access_token' => array(
+        'description' => 'The access token.',
+        'type' => 'varchar',
+        'length' => 256,
+	  ),
+    'access_token_request_time' => array(
+        'description' => 'The access token expiry time.',
+        'type' => 'varchar',
+        'length' => 256,
+        'not null' => FALSE,
+	  ),
+    'id_token' => array(
+        'description' => 'The id token.',
+        'type' => 'varchar',
+        'length' => 2048,
+	  ),
+    'id_token_request_time' => array(
+        'description' => 'The id token expiry time.',
+        'type' => 'varchar',
+        'length' => 256,
+        'not null' => FALSE,
+	  ),
+	),
+	'primary key' => array('id'),
+  );
+  return $schema;
+}
