@@ -28,6 +28,40 @@ class JsonApiDefaultsFunctionalTest extends JsonApiExtrasFunctionalTestBase {
     'jsonapi_defaults',
   ];
 
+    /**
+     * Test regression on sorting from issue 3322635.
+     */
+    public function testSortRegression3322635() {
+        $this->setResouceConfigValue([
+            'default_filter' => [],
+            'default_sorting' => [],
+        ]);
+
+        $this->createDefaultContent(2, 5, TRUE, TRUE, static::IS_NOT_MULTILINGUAL);
+
+        $this->nodes[0]->title->setValue('b');
+        $this->nodes[0]->save();
+
+        $this->nodes[1]->title->setValue('a');
+        $this->nodes[1]->save();
+
+        $stringResponse = $this->drupalGet('/api/articles', ['query' => ['sort' => 'title']]);
+        $output = Json::decode($stringResponse);
+
+        // Check if order changed as expected.
+        $this->assertEquals('a', $output['data'][0]['attributes']['title']);
+        $this->assertEquals('b', $output['data'][1]['attributes']['title']);
+
+        $stringResponse = $this->drupalGet('/api/articles', ['query' => ['sort' => '-title']]);
+        $output = Json::decode($stringResponse);
+
+        // Check if order changed as expected.
+        $this->assertEquals('b', $output['data'][0]['attributes']['title']);
+        $this->assertEquals('a', $output['data'][1]['attributes']['title']);
+
+    }
+
+
   /**
    * Test the GET method.
    */

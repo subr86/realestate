@@ -74,12 +74,12 @@ class EntityResource extends JsonApiEntityResourse {
 
     $filters = array_merge(
       $default_filter,
-      $request->query->all('filter')
+      $request->query->get('filter', [])
     );
 
     $sort = [];
     if ($request->query->has('sort')) {
-      $sort = Sort::createFromQueryParameter($request->query->all('sort'))->fields();
+      $sort = Sort::createFromQueryParameter($request->query->get('sort'))->fields();
     }
     $sorting = array_merge($default_sorting, $sort);
 

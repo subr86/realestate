@@ -21,6 +21,7 @@
         "drupal/core-composer-scaffold": "^9.4",
         "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
+        "drupal/geolocation": "^3.10",
         "drupal/group": "^1.5",
         "drupal/jsonapi_extras": "^3.22",
         "drupal/jsonapi_views": "^1.0",
@@ -30,9 +31,7 @@
         "drupal/openapi_rest": "^2.0@RC",
         "drupal/openapi_ui": "^1.0@RC",
         "drupal/openapi_ui_swagger": "^1.0@RC",
-        "drupal/rest_api_authentication": "^1.13",
         "drupal/restui": "^1.21",
-        "drupal/simple_oauth": "^6.0@beta",
         "drupal/swagger_ui_formatter": "^3.4"
     },
     "conflict": {
