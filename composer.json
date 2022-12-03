@@ -32,7 +32,8 @@
         "drupal/openapi_ui": "^1.0@RC",
         "drupal/openapi_ui_swagger": "^1.0@RC",
         "drupal/restui": "^1.21",
-        "drupal/swagger_ui_formatter": "^3.4"
+        "drupal/swagger_ui_formatter": "^3.4",
+        "drupal/taxonomy_manager": "^2.0"
     },
     "conflict": {
         "drupal/drupal": "*"
