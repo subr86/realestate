@@ -21,6 +21,8 @@
         "drupal/core-composer-scaffold": "^9.4",
         "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
+        "drupal/cshs": "^4.0",
+        "drupal/currency": "^3.4",
         "drupal/geolocation": "^3.10",
         "drupal/group": "^1.5",
         "drupal/jsonapi_extras": "^3.22",
