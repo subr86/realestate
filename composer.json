@@ -23,6 +23,7 @@
         "drupal/core-recommended": "^9.4",
         "drupal/cshs": "^4.0",
         "drupal/geolocation": "^3.10",
+        "drupal/getjwtonlogin": "^2.0",
         "drupal/group": "^1.5",
         "drupal/jsonapi_extras": "^3.22",
         "drupal/jsonapi_views": "^1.0",
@@ -32,9 +33,12 @@
         "drupal/openapi_rest": "^2.0@RC",
         "drupal/openapi_ui": "^1.0@RC",
         "drupal/openapi_ui_swagger": "^1.0@RC",
+        "drupal/pager_serializer": "^1.2",
+        "drupal/rest_export_nested": "^1.0",
         "drupal/restui": "^1.21",
         "drupal/swagger_ui_formatter": "^3.4",
         "drupal/taxonomy_manager": "^2.0",
+        "drupal/views_field_view": "^1.0@beta",
         "drupal/views_serialization_pager": "^1.1"
     },
     "conflict": {
