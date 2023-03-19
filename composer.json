@@ -37,8 +37,10 @@
         "drupal/pager_serializer": "^1.2",
         "drupal/rest_export_nested": "^1.0",
         "drupal/restui": "^1.21",
+        "drupal/smtp": "^1.2",
         "drupal/swagger_ui_formatter": "^3.4",
         "drupal/taxonomy_manager": "^2.0",
+        "drupal/tracker": "^1.0",
         "drupal/views_field_view": "^1.0@beta",
         "drupal/views_serialization_pager": "^1.1"
     },
