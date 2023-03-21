@@ -25,6 +25,7 @@
         "drupal/cshs": "^4.0",
         "drupal/eca": "^1.1",
         "drupal/eca_cm": "^1.0",
+        "drupal/eca_tamper": "^1.0",
         "drupal/eca_views_data_export": "^1.0",
         "drupal/geolocation": "^3.10",
         "drupal/getjwtonlogin": "^2.0",
