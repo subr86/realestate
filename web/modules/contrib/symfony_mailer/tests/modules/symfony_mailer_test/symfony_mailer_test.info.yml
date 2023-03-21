@@ -1,0 +1,11 @@
+name: Drupal Symfony Mailer Test
+type: module
+package: Testing
+hidden: true
+dependencies:
+  - symfony_mailer:symfony_mailer
+
+# Information added by Drupal.org packaging script on 2023-03-06
+version: '1.2.0'
+project: 'symfony_mailer'
+datestamp: 1678101477

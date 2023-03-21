@@ -1,0 +1,13 @@
+name: 'ECA Views data export'
+type: module
+description: 'Integrate ECA with the views_data_export module.'
+core_version_requirement: ^9 || ^10
+package: ECA
+dependencies:
+  - eca:eca
+  - views_data_export:views_data_export
+
+# Information added by Drupal.org packaging script on 2023-01-30
+version: '1.0.0'
+project: 'eca_views_data_export'
+datestamp: 1675075882

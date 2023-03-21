@@ -1,0 +1,22 @@
+services:
+  eca_views_data_export.subscriber:
+    class: Drupal\eca_views_data_export\EventSubscriber\EcaEventSubscriber
+    parent: eca.default_event_subscriber
+    tags:
+      - { name: event_subscriber }
+
+  eca.execution.views_row_subscriber:
+    class: Drupal\eca_views_data_export\EventSubscriber\EcaExecutionRowSubscriber
+    parent: eca.default_event_subscriber
+    tags:
+      - { name: event_subscriber }
+
+  eca_views_data_export.hook_handler:
+    class: Drupal\eca_views_data_export\HookHandler
+    arguments: ['@eca.trigger_event']
+
+  eca.token_data.views_row:
+    class: Drupal\eca_views_data_export\Token\ViewsRowDataProvider
+    arguments: ['@eca.execution.views_row_subscriber']
+    tags:
+      - { name: eca.token_data_provider }

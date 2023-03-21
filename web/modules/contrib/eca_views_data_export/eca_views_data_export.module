@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Module file of the views_data_export project.
+ */
+
+use Drupal\eca_views_data_export\HookHandler;
+use Drupal\views\ResultRow;
+use Drupal\views\ViewExecutable;
+
+/**
+ * Eca content hooh handler.
+ *
+ * @return \Drupal\eca_views_data_export\HookHandler
+ *   The eca_views_data_export hook handler.
+ */
+function _eca_views_data_export_hook_handler(): HookHandler {
+  return \Drupal::service('eca_views_data_export.hook_handler');
+}
+
+/**
+ * Implements hook_views_data_export_row_alter().
+ */
+function eca_views_data_export_views_data_export_row_alter(array &$row, ResultRow $result, ViewExecutable $view): void {
+  _eca_views_data_export_hook_handler()->alterRow($row, $result, $view);
+}

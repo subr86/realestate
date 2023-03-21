@@ -1,0 +1,15 @@
+{
+  "name": "drupal/eca_views_data_export",
+  "license": "GPL-2.0-or-later",
+  "type": "drupal-module",
+  "description": "Integrate ECA with the views_data_export module.",
+  "support": {
+    "issues": "https://drupal.org/project/issues/eca_views_data_export",
+    "source": "https://drupal.org/project/eca_views_data_export"
+  },
+  "require": {
+    "php": ">=7.4",
+    "drupal/eca": "^1.0",
+    "drupal/views_data_export": "^1.2"
+  }
+}
