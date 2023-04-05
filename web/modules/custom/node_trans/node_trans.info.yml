@@ -1,0 +1,5 @@
+name: 'Translation Nodes'
+type: module
+description: 'Translation Nodes when node create'
+core_version_requirement: ^9.2 || ^10
+package: 'Custom'

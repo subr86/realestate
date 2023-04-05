@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * Contains node_trans.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function node_trans_help($route_name, RouteMatchInterface $route_match)
+{
+  switch ($route_name) {
+    // Main module help for the creating_nodes module.
+    case 'help.page.node_trans':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Helper module for creating translations for nodes programmatically') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function node_trans_entity_insert(Drupal\Core\Entity\EntityInterface $entity)
+{
+  $currLanguage = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  $langcodes = \Drupal::languageManager()->getLanguages();
+  $langcodesList = array_keys($langcodes);
+  $node_types = array('client', 'agency', 'estate');
+  if ($entity->getEntityTypeId() == 'node' && in_array($entity->getType(), $node_types)) {
+    foreach ($langcodesList as $languageId) {
+      if ($currLanguage != $languageId) {
+        $entity->addTranslation($languageId, $entity->toArray())->save();
+      }
+    }
+  }
+}
+
