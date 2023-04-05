@@ -30,6 +30,7 @@
         "drupal/geolocation": "^3.10",
         "drupal/getjwtonlogin": "^2.0",
         "drupal/group": "^1.5",
+        "drupal/inline_entity_form": "^1.0@RC",
         "drupal/jsonapi_extras": "^3.22",
         "drupal/jsonapi_views": "^1.0",
         "drupal/jwt": "^1.0",
