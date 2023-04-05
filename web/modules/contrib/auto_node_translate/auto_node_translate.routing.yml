@@ -1,0 +1,10 @@
+
+auto_node_translate.config_form:
+  path: '/admin/config/auto_node_translate/config'
+  defaults:
+    _form: '\Drupal\auto_node_translate\Form\ConfigForm'
+    _title: 'ConfigForm'
+  requirements:
+    _permission: 'configure auto node translate'
+  options:
+    _admin_route: TRUE

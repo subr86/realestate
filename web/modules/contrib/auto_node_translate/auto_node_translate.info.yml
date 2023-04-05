@@ -1,0 +1,13 @@
+name: Auto Node Translation
+type: module
+description: 'Translate content automatically'
+package: Multilingual
+core_version_requirement: ^8.8 || ^9 || ^10
+configure: auto_node_translate.config_form
+dependencies:
+  - drupal:content_translation
+
+# Information added by Drupal.org packaging script on 2023-03-23
+version: '2.1.6'
+project: 'auto_node_translate'
+datestamp: 1679569345
