@@ -30,7 +30,7 @@ function node_trans_entity_insert(Drupal\Core\Entity\EntityInterface $entity)
   $langcodes = \Drupal::languageManager()->getLanguages();
   $langcodesList = array_keys($langcodes);
 //  $entity_types = array('taxonomy_term', 'node');
-  $node_types = array('client', 'agency', 'estate');
+  $node_types = array('client', 'agency', 'estate', 'complex');
   if (($entity->getEntityTypeId() == 'node' && in_array($entity->getType(), $node_types)) or $entity->getEntityTypeId() == 'taxonomy_term') {
     foreach ($langcodesList as $languageId) {
       if ($currLanguage != $languageId) {
